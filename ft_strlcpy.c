@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkeskin <kkeskin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/26 16:47:47 by kkeskin           #+#    #+#             */
-/*   Updated: 2025/05/29 17:29:33 by kkeskin          ###   ########.fr       */
+/*   Created: 2025/05/31 03:42:29 by kkeskin           #+#    #+#             */
+/*   Updated: 2025/05/31 05:17:38 by kkeskin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	arr[] = {0, 1};
+	size_t	i;
 
-	ft_memset(arr, 255, 4);
-	ft_memset(arr, 231, 2);
-	ft_memset(arr, 0, 1);
-	ft_putnbr_fd(arr[0], 1);
-	ft_putchar_fd('\n', 1);
-	//ft_bzero(arr, 4);
-	//ft_memcpy(arr + 1, arr, 4);
-	ft_memmove(arr + 1, arr, 4);
-	ft_putnbr_fd(arr[1], 1);
-	ft_putchar_fd('\n', 1);
-	return (0);
+	if (size == 0)
+		return (ft_strlen(src));
+	i = 0;
+	while (src[i] && i < size - 1)
+	{
+		dst[i] = ((char *)src)[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
