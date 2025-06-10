@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkeskin <kkeskin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/31 07:03:20 by kkeskin           #+#    #+#             */
-/*   Updated: 2025/05/31 07:23:05 by kkeskin          ###   ########.fr       */
+/*   Created: 2025/06/10 14:21:24 by kkeskin           #+#    #+#             */
+/*   Updated: 2025/06/10 14:21:25 by kkeskin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*p;
+	unsigned char	*ptr;
 	size_t			i;
 
-	p = (unsigned char *)s;
+	ptr = (unsigned char *)s;
 	i = 0;
-	while (p[i] && p[i] != c && i < n)
+	while (i < n)
+	{
+		if (ptr[i] == (unsigned char)c)
+			return ((void *)&ptr[i]);
 		i++;
-	if (p[i] == c)
-		return (&p[i]);
+	}
 	return (NULL);
 }

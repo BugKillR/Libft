@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkeskin <kkeskin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/31 05:59:25 by kkeskin           #+#    #+#             */
-/*   Updated: 2025/05/31 06:15:33 by kkeskin          ###   ########.fr       */
+/*   Created: 2025/06/10 14:23:27 by kkeskin           #+#    #+#             */
+/*   Updated: 2025/06/10 14:23:28 by kkeskin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*p;
+	char	*ptr;
+	int		i;
 
-	p = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!p)
+	ptr = (char *)malloc(ft_strlen(s) + 1);
+	if (!ptr)
 		return (NULL);
-	ft_memcpy(p, s, ft_strlen(s));
-	p[s] = '\0';
-	return (p);
+	i = -1;
+	while (s[++i])
+		ptr[i] = s[i];
+	ptr[i] = '\0';
+	return (ptr);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkeskin <kkeskin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/26 17:49:00 by kkeskin           #+#    #+#             */
-/*   Updated: 2025/05/26 18:22:10 by kkeskin          ###   ########.fr       */
+/*   Created: 2025/06/10 14:22:36 by kkeskin           #+#    #+#             */
+/*   Updated: 2025/06/10 14:22:36 by kkeskin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	if (n == -2147483647 - 1)
 	{
 		ft_putstr_fd("-2147483648", fd);
 		return ;
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		n *= -1;
+		n = -n;
 	}
 	if (n > 9)
 	{

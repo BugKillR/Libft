@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkeskin <kkeskin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/31 03:42:29 by kkeskin           #+#    #+#             */
-/*   Updated: 2025/05/31 05:17:38 by kkeskin          ###   ########.fr       */
+/*   Created: 2025/06/10 15:26:12 by kkeskin           #+#    #+#             */
+/*   Updated: 2025/06/10 15:26:13 by kkeskin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
-	if (size == 0)
+	if (!size)
 		return (ft_strlen(src));
 	i = 0;
 	while (src[i] && i < size - 1)
 	{
-		dst[i] = ((char *)src)[i];
+		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';

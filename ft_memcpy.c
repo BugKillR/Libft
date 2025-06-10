@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkeskin <kkeskin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/29 14:12:57 by kkeskin           #+#    #+#             */
-/*   Updated: 2025/05/31 01:02:07 by kkeskin          ###   ########.fr       */
+/*   Created: 2025/06/10 14:21:43 by kkeskin           #+#    #+#             */
+/*   Updated: 2025/06/10 14:21:43 by kkeskin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*s;
-	unsigned char	*d;
-	size_t			i;
+	unsigned const char	*s;
+	unsigned char		*d;
+	size_t				i;
 
-	if (!dest && !src)
+	if (!src || !dest)
 		return (NULL);
-	s = (unsigned char *)src;
+	s = (unsigned const char *)src;
 	d = (unsigned char *)dest;
 	i = 0;
 	while (i < n)

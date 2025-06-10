@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkeskin <kkeskin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/26 16:55:25 by kkeskin           #+#    #+#             */
-/*   Updated: 2025/05/26 16:59:29 by kkeskin          ###   ########.fr       */
+/*   Created: 2025/06/10 14:22:46 by kkeskin           #+#    #+#             */
+/*   Updated: 2025/06/10 14:22:47 by kkeskin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

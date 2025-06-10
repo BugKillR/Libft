@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkeskin <kkeskin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/29 13:54:27 by kkeskin           #+#    #+#             */
-/*   Updated: 2025/05/29 17:28:03 by kkeskin          ###   ########.fr       */
+/*   Created: 2025/06/10 14:18:40 by kkeskin           #+#    #+#             */
+/*   Updated: 2025/06/10 14:18:42 by kkeskin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*p;
+	unsigned char	*ptr;
 	size_t			i;
 
-	p = (unsigned char *)s;
 	i = 0;
+	ptr = (unsigned char *)s;
 	while (i < n)
 	{
-		p[i] = 0;
+		ptr[i] = 0;
 		i++;
 	}
 }

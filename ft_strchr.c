@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkeskin <kkeskin@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/31 15:08:38 by kkeskin           #+#    #+#             */
-/*   Updated: 2025/05/31 15:14:15 by kkeskin          ###   ########.fr       */
+/*   Created: 2025/06/10 14:23:13 by kkeskin           #+#    #+#             */
+/*   Updated: 2025/06/10 14:23:15 by kkeskin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
+	size_t	slen;
 
 	i = 0;
-	while (s[i])
+	slen = ft_strlen(s);
+	while (i < slen + 1)
 	{
 		if (s[i] == (char)c)
-			return (&((char *)s)[i]);
+			return ((char *)&s[i]);
 		i++;
 	}
-	if (s[i] == '\0')
-		return (&((char *)s)[i]);
 	return (NULL);
 }
