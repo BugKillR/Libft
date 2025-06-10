@@ -19,6 +19,7 @@ CFILES =	ft_isalpha.c \
 			ft_strlcat.c \
 			ft_strchr.c \
 			ft_strrchr.c \
+			ft_strncmp.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_strnstr.c \
@@ -41,7 +42,8 @@ BONUSFILES = 	ft_lstnew_bonus.c \
 				ft_lstadd_front_bonus.c \
 				ft_lstsize_bonus.c \
 				ft_lstlast_bonus.c \
-				ft_lstadd_back_bonus.c
+				ft_lstadd_back_bonus.c \
+				ft_lstdelone_bonus.c
 
 OFILES = $(CFILES:.c=.o)
 BONUSOBJECTS = $(BONUSFILES:.c=.o)
