@@ -76,7 +76,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-## Below codes are not included in original LIBFT project.
+// Below codes are not included in original LIBFT project.
 
 void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(void *, void *));
 void	ft_list_foreach(t_list *begin_list, void (*f)(void *));
@@ -84,5 +84,6 @@ void	ft_realloc(char **ptr1, char *ptr2);
 int		ft_abs(int n);
 
 #endif
+
 
 
