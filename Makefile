@@ -48,7 +48,9 @@ BONUS = ft_lstadd_front_bonus.c \
 		ft_lstclear_bonus.c \
 		ft_lstnew_bonus.c \
 		ft_lstiter_bonus.c \
-		ft_lstmap_bonus.c
+		ft_lstmap_bonus.c \
+		ft_list_remove_if.c \
+		ft_list_foreach.c
 
 OBJS	= $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS:.c=.o)
@@ -70,3 +72,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all bonus clean fclean re
+
