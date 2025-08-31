@@ -1,17 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_flood_fill.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: kkeskin <kkeskin@student.42istanbul.com.t  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/31 15:44:52 by kkeskin           #+#    #+#             */
-/*   Updated: 2025/08/31 15:44:53 by kkeskin          ###   ########.tr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-#include <stdio.h>
 
 static void	fill(char **map, t_flood_fill_data data, char search, char swap)
 {
