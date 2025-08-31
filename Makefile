@@ -38,7 +38,8 @@ SRCS	= ft_atoi.c \
 			ft_tolower.c \
 			ft_toupper.c \
 			ft_realloc.c \
-			ft_abs.c
+			ft_abs.c \
+			ft_flood_fill.c
 
 BONUS = ft_lstadd_front_bonus.c \
 		ft_lstsize_bonus.c \

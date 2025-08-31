@@ -20,6 +20,18 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct s_vector2
+{
+	int			x;
+	int			y;
+}				t_vector2;
+
+typedef struct s_flood_fill_data
+{
+	t_vector2	size;
+	t_vector2	curr;
+}				t_flood_fill_data;
+
 # ifndef INT_MIN
 #  define INT_MIN -2147483648
 # endif
@@ -78,12 +90,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 // Below codes are not included in original LIBFT project.
 
-void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(void *, void *));
+void	ft_list_remove_if(t_list **begin_list, void *data_ref,
+			int (*cmp)(void *, void *));
 void	ft_list_foreach(t_list *begin_list, void (*f)(void *));
 void	ft_realloc(char **ptr1, char *ptr2);
 int		ft_abs(int n);
+void	ft_flood_fill(char **tab, t_flood_fill_data data,
+			char search, char swap);
 
 #endif
-
-
-
