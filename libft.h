@@ -29,7 +29,7 @@ typedef struct s_vector2
 typedef struct s_flood_fill_data
 {
 	t_vector2	size;
-	t_vector2	beginning;
+	t_vector2	curr;
 }				t_flood_fill_data;
 
 # ifndef INT_MIN
@@ -97,5 +97,6 @@ void	ft_realloc(char **ptr1, char *ptr2);
 int		ft_abs(int n);
 void	ft_flood_fill(char **tab, t_flood_fill_data beginning,
 			char search, char swap);
+int		ft_count_chr(char *str, char c);
 
 #endif
